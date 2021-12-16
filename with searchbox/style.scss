@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    transition: all 0.2s linear;
+}
+
+$pink: #ff0080;
+$black: #222;
+$light-bg: #f5f5f5;
+$light-color: #777;
+$white: #fff;
+$border:.2rem solid $black;
+$box-shadow: 0 .5rem 1rem rgba(0,0,0,0.1);
+
+
+@mixin grid($val) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax($val,1fr));
+    gap: 2rem;
+}
+    
+html{
+    
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    scroll-padding-top: 6rem;
+
+    &::-webkit-scrollbar {
+        width: 1rem;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: $pink;
+    }
+}
+
+.header{
+    background: $white;
+    padding: 1.5rem 9%;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0%;
+    width: 100%;
+    box-shadow: $box-shadow;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;   
+
+}
+
+.header .logo img{
+    height: 4rem;
+}
+
+.header .search-form{
+    width: 50rem;
+    height: 5rem;
+    border: $border;
+    border-radius: .5rem;
+    padding:0 1.5rem;
+    background: $light-bg;
+    display: flex;
+    align-items: center;
+    
+}
+
+.header .search-form input{
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: none;
+    font-size: 1.6rem;
+    color: $light-color;
+    text-transform: none;
+}
+.header .search-form label{
+    font-size: 2rem;
+    margin-left: .7rem;
+    color: $black;
+
+  
+}
+.header .search-form label:hover{
+    color: $pink;
+}
