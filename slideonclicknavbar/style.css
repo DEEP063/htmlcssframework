@@ -1,0 +1,23 @@
+.abc {
+  background: #412323;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+.abc h1 {
+  color: white;
+  font-size: 3rem;
+  font-weight: bold;
+  position: fixed;
+  top: 50%;
+  left: -110%;
+}
+
+.abc h1:hover {
+  color: #09aa24;
+}
+
+.abc h1.active {
+  left: 50%;
+}
+/*# sourceMappingURL=style.css.map */
